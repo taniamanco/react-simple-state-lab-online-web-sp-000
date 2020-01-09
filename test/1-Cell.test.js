@@ -52,10 +52,10 @@ describe('<Cell />', () => {
     expect(setState.calledOnce).to.equal(true);
   })
 
-  // it("has an event listener that, when clicked, sets state's 'color' key to a value of '#333'", () => {
-  //   cellWhite.find('div').simulate('click')
-  //   expect(cellWhite.state('color')).to.equal('#333')
-  // })
+  it("has an event listener that, when clicked, sets state's 'color' key to a value of '#333'", () => {
+    cellWhite.find('div').simulate('click')
+    expect(cellWhite.state('color')).to.equal('#333')
+  })
 
   it("sets the <div>'s inline style attribute to 'style={{backgroundColor: this.state.color}}'", () => {
     expect(cellWhite.props().style.hasOwnProperty('backgroundColor')).to.equal(true)
